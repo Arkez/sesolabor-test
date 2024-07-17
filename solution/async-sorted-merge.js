@@ -6,11 +6,11 @@ module.exports = (logSources, printer) => {
   return new Promise( async (resolve, reject) => {
 
 const test = await Promise.all(
-  logSources.map(async (player) => {
-          return await player.popAsync()
+  logSources.map(async (log) => {
+          return await log.popAsync()
     }));
-  test.sort((a,b)=>a.date - b.date).forEach((player) => {
-     printer.print(player);
+  test.sort((a,b)=>a.date - b.date).forEach((log) => {
+     printer.print(log);
     })
     printer.done()
 

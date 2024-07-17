@@ -10,8 +10,8 @@ module.exports = (logSources, printer) => {
     return a.date - b.date
   })
 
-  prep.forEach((player) => {
-   printer.print(player);
+  prep.forEach((log) => {
+   printer.print(log);
   })
 
   printer.done()
